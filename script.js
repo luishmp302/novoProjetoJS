@@ -6,10 +6,34 @@ function showPage(pageId) {
     document.getElementById(pageId).style.display = 'block';
 }
 
+document.getElementById('name').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+document.getElementById('email').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+document.getElementById('msgEnviar').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
 function sendMessage() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var msg = document.getElementById('msgEnviar').value;
+
+    if (name === '' || email === '' || msg === '') {
+        alert('[ERRO] Por favor, preencha todos os campos antes de enviar a mensagem.');
+        return; 
+    }
+
     var message = name + '( ' + email + ')' + ': ' + msg;
 
     var messagesDiv = document.getElementById('messages');

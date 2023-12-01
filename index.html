@@ -10,6 +10,7 @@
 
     <header>
         <h1>Projeto JS</h1>
+        <p> Senha e usuário para acesso: "admin"</p>
     </header>
 
     <nav>
@@ -25,6 +26,11 @@
 
     <section id="contato" style="display:none;">
         <h2>Contato</h2>
+        <p> Faça seu contato através de uma mensagem!</p>
+        <p> Primeiramente, coloque seus dados para identificação.</p>
+        <p> Após isso, adicione sua mensagem.</p>
+        <br>
+        <div id="dados"> 
         <form id="contactForm">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
@@ -32,10 +38,12 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <br>
-            Coloque sua mensagem:<input type="text" id="msgEnviar" name="msg" required>
+            Mensagem:<input type="text" id="msgEnviar" name="msg" required>
             <br>
-            <button type="button" onclick="sendMessage()">Enviar Mensagem</button>
+            
+            <button type="button" id="benviar" onclick="sendMessage()">Enviar Mensagem</button>
         </form>
+        </div>
         <div id="messages">
             <!-- Mensagens enviadas serão exibidas aqui -->
         </div>

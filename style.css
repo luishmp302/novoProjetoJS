@@ -27,6 +27,10 @@ nav a {
 
 }
 
+#home, #contato, #areaAdmin {
+    text-align: center;
+}
+
 nav a:hover {
     background-color: #ddd;
     color: black;
@@ -46,3 +50,18 @@ form {
     height: 200px;
     overflow-y: scroll;
 }
+
+#dados {
+    justify-content: center;
+    text-align: center;
+}
+
+#msgEnviar {
+    margin-right: 34px;
+}
+
+#benviar {
+    margin-left: 55px;
+    margin-top: 20px;
+}
+
